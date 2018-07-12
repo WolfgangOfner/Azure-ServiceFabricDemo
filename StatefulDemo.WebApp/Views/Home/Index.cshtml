@@ -1,0 +1,23 @@
+﻿@model IDictionary<Guid, long>
+
+    <h2>@ViewData["Title"].</h2>
+    <h3>@ViewData["Message"]</h3>
+
+<table class="table-bordered">
+    <tr>
+        <td>
+            <strong>PARTITION ID</strong>
+        </td>
+        <td>
+            <strong># LEADS</strong>
+        </td>
+    </tr>
+    @foreach (var partition in Model)
+    {
+        <tr>
+            <td>@partition.Key.ToString()</td>
+            <td>@partition.Value</td>
+        </tr>
+    }
+</table>
+
